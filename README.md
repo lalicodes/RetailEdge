@@ -63,7 +63,7 @@ dotnet run
 🔧 Configuration
 Update your DB connection in OracleHelper.cs:
 
-"User Id=system;Password=RetailEdge2025;Data Source=//192.168.79.104:1521/XE;"
+"User Id=system;Password=RetailEdge2025;Data Source=//(YOURIPADRESS):(PORT)/(SERVICENAME);"
 
 
 🧪 Sample Query (Oracle)
