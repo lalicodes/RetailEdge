@@ -52,21 +52,29 @@ RetailEdge is a feature-rich, enterprise-grade retail inventory and sales manage
 - .NET SDK 6+
 - Oracle.ManagedDataAccess NuGet package
 
+
+
 ### 📦 Clone & Run
 
 git clone https://github.com/lalicodes/RetailEdge.git
+
 cd RetailEdge
+
 dotnet restore
+
 dotnet run
 
 
-🔧 Configuration
+
+### 🔧 Configuration
+
 Update your DB connection in OracleHelper.cs:
+
 
 "User Id=system;Password=RetailEdge2025;Data Source=//(YOURIPADRESS):(PORT)/(SERVICENAME);"
 
 
-🧪 Sample Query (Oracle)
+### 🧪 Sample Query (Oracle)
 
 SELECT product_name, quantity_in_stock
 FROM products
@@ -75,7 +83,7 @@ WHERE quantity_in_stock < 10;
 
 
 
-🛠 Planned Enhancements
+### 🛠 Planned Enhancements
 🔔 Low-stock email alerts
 
 📤 Export sales reports to PDF
@@ -86,7 +94,7 @@ WHERE quantity_in_stock < 10;
 
 
 
-📚 Learning Goals
+### 📚 Learning Goals
 This project demonstrates:
 
 Enterprise DB architecture across Oracle DB
@@ -98,7 +106,7 @@ Real-time retail logic with automation via WinForms/VBScript
 Report building and inventory analytics
 
 
-👨‍💼 Built By
+### 👨‍💼 Built By
 Lali Krishnan
 Bachelor of Science, Computer Science
 I built this project to simulate the systems used by retail analysts, merchandisers, and IT engineers in national retail chains.
