@@ -1,0 +1,42 @@
+﻿@page
+@model RetailEdge.Web.Pages.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid px-4">
+    <h2 class="mb-3">Welcome, @HttpContext.Session.GetString("name")!</h2>
+    <p class="text-muted">Role: @HttpContext.Session.GetString("role")</p>
+
+    <div class="row g-4 mt-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Products</h5>
+                    <p class="card-text">Manage inventory, pricing, and stock levels.</p>
+                    <a asp-page="/Products" class="btn btn-outline-primary">Go to Products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sales</h5>
+                    <p class="card-text">Review recent transactions and payment methods.</p>
+                    <a asp-page="/Sales" class="btn btn-outline-success">Go to Sales</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Reports</h5>
+                    <p class="card-text">Generate KPIs and summaries for store performance.</p>
+                    <a asp-page="/Reports" class="btn btn-outline-secondary">View Reports</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

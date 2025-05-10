@@ -1,0 +1,11 @@
+CategoryID,CategoryName,ParentCategory,IsActive
+CAT-01,Beverages,Retail Goods,Yes
+CAT-02,Snacks,Retail Goods,Yes
+CAT-03,Prepared Foods,Retail Goods,Yes
+CAT-04,Frozen Foods,Retail Goods,Yes
+CAT-05,Bakery,Retail Goods,Yes
+CAT-06,Dairy Products,Retail Goods,Yes
+CAT-07,Household Essentials,Retail Goods,Yes
+CAT-08,Health & Beauty,Retail Goods,Yes
+CAT-09,Tobacco,Retail Goods,Yes
+CAT-10,Automotive,Retail Goods,Yes

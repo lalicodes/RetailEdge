@@ -1,0 +1,58 @@
+﻿@page
+@model RetailEdge.Web.Pages.UsersModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h2 class="mb-4">👥 Users</h2>
+
+<!-- 🔍 Store Filter -->
+<form method="get" class="row mb-3">
+    <div class="col-md-4">
+        <label class="form-label">Filter by Store</label>
+        <select name="StoreFilter" class="form-select" onchange="this.form.submit()">
+    <option value="">-- All Stores --</option>
+    @foreach (var storeId in Model.StoreIds)
+    {
+        var selected = Model.StoreFilter == storeId ? "selected" : "";
+        @: <option value="@storeId" @selected>Store @storeId</option>
+    }
+</select>
+
+    </div>
+</form>
+
+<p>🔍 Total Users: @Model.Users.Count</p>
+
+@if (!Model.Users.Any())
+{
+    <div class="alert alert-warning">⚠ No users found for the selected store.</div>
+}
+else
+{
+    <table class="table table-bordered table-striped shadow-sm bg-white">
+        <thead class="table-light">
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Username</th>
+                <th>Permissions</th>
+                <th>Store ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.UserId</td>
+                    <td>@user.Name</td>
+                    <td>@user.Role</td>
+                    <td>@user.Username</td>
+                    <td>@user.Permissions</td>
+                    <td>@(user.StoreId.HasValue ? $"Store {user.StoreId}" : "-")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,63 @@
+﻿@page
+@model RetailEdge.Web.Pages.SalesModel
+@{
+    ViewData["Title"] = "Sales Transactions";
+}
+
+<h2 class="mb-4">🧾 Sales Transactions</h2>
+
+<!-- 📊 Summary Panel -->
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5>Total Orders</h5>
+                <p class="fs-4">@Model.TotalOrders</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <h5>Total Revenue</h5>
+                <p class="fs-4">$@Model.TotalRevenue.ToString("F2")</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-secondary">
+            <div class="card-body">
+                <h5>Avg Order Value</h5>
+                <p class="fs-4">$@Model.AvgOrderValue.ToString("F2")</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (!Model.Orders.Any())
+{
+    <div class="alert alert-warning">⚠ No orders found in the database.</div>
+}
+else
+{
+    @foreach (var order in Model.Orders)
+    {
+        <div class="card mb-4">
+            <div class="card-header">
+                <strong>Order ID:</strong> @order.OrderId |
+                <strong>Customer:</strong> @order.CustomerName |
+                <strong>Date:</strong> @order.OrderDate.ToShortDateString() |
+                <strong>Status:</strong> @order.Status |
+                <strong>Total:</strong> $@order.TotalAmount.ToString("F2")
+            </div>
+            <ul class="list-group list-group-flush">
+                @foreach (var item in order.Items)
+                {
+                    <li class="list-group-item">
+                        🛒 <strong>@item.ProductName</strong> — @item.Quantity × $@item.UnitPrice.ToString("F2") = <strong>$@((item.Quantity * item.UnitPrice).ToString("F2"))</strong>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+}

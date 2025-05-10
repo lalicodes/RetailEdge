@@ -1,0 +1,57 @@
+SupplierID,Name,ContactEmail,Phone,PaymentTerms,DeliveryDays
+SUP-001,PepsiCo,jeffreysolis@hart.com,(124)093-9545,Net 30,Tue/Thu
+SUP-002,Coca-Cola,mistymiller@ferrell.com,001-437-557-6131x4229,Net 45,Tue/Thu
+SUP-003,Monster,djones@smith-jenkins.com,(491)742-2541x91145,Net 45,Daily
+SUP-004,Red Bull,diane15@griffin.com,421-276-0806,Net 30,Daily
+SUP-005,Nestle USA,oconnelltraci@mendez.com,(045)485-9562x540,Net 30,Tue/Thu
+SUP-006,Arizona,johnlucas@clark.com,+1-217-445-2996,Net 45,Daily
+SUP-007,Frito-Lay,kirstenbailey@estrada-graves.biz,(712)387-9132x1551,Net 60,Mon/Wed/Fri
+SUP-008,Kellogg's,whamilton@martin.net,(778)983-5551x98936,Net 45,Mon/Wed/Fri
+SUP-009,Planters,elizabethmartinez@martin-spencer.com,(957)991-1221,Net 45,Mon/Wed/Fri
+SUP-010,Mondelez,ccallahan@hansen.com,351-311-7721,Net 30,Tue/Thu
+SUP-011,Campbell Soup,susan02@hoffman.biz,(033)833-4003x1473,Net 60,Daily
+SUP-012,Mars,harrisjulie@schroeder-mosley.com,833-288-4555x18029,Net 45,Mon/Wed/Fri
+SUP-013,Casey's Kitchen,billyjones@fox-smith.info,890.894.9973x222,Net 30,Daily
+SUP-014,DiGiorno,teresa59@gardner.com,508-509-7288,Net 45,Tue/Thu
+SUP-015,Amy's Kitchen,gdavis@cook.org,(120)318-3349x5951,Net 45,Tue/Thu
+SUP-016,Jimmy Dean,mcdanielgregory@richardson.com,(026)419-8838x5181,Net 30,Mon/Wed/Fri
+SUP-017,Sara Lee,higginssabrina@rodriguez.com,634.215.6542,Net 45,Daily
+SUP-018,Eggo,pkelley@mcbride.com,001-822-280-8345x1885,Net 30,Tue/Thu
+SUP-019,Kraft Heinz,maxwellnicholas@barnes.com,+1-484-067-1002x36334,Net 30,Mon/Wed/Fri
+SUP-020,General Mills,samantha76@jimenez.com,5682254565,Net 30,Mon/Wed/Fri
+SUP-021,Dairy Farmers of America,william74@rodgers.org,9792482584,Net 60,Daily
+SUP-022,Land O'Lakes,anthonygrimes@stone-barnes.com,001-263-565-6427,Net 45,Tue/Thu
+SUP-023,Thomas',danielflynn@downs.com,961.413.5511,Net 30,Tue/Thu
+SUP-024,Philadelphia,timsingh@garcia-lynch.com,+1-139-400-6154x6920,Net 45,Tue/Thu
+SUP-025,Pillsbury,hdillon@horn.com,001-622-597-9487,Net 45,Tue/Thu
+SUP-026,Casey's Bakery,danielclark@wilson-spencer.info,001-233-226-7088x8220,Net 45,Daily
+SUP-027,Kimberly-Clark,murphylinda@moore-ward.com,390.705.8830x44135,Net 60,Mon/Wed/Fri
+SUP-028,Procter & Gamble,ashley57@morrison-stone.com,001-537-724-5254,Net 45,Mon/Wed/Fri
+SUP-029,Glad,simpsonjeremy@benitez-adkins.net,457-155-0879x6502,Net 60,Tue/Thu
+SUP-030,Palmolive,justin53@parrish.biz,919.994.8815,Net 60,Mon/Wed/Fri
+SUP-031,Tide,allen01@shaw.com,949-679-6529,Net 30,Daily
+SUP-032,Windex,katherine59@smith.biz,(436)249-6507,Net 45,Mon/Wed/Fri
+SUP-033,Lysol,elizabethhood@jones.com,7078668686,Net 60,Daily
+SUP-034,Duracell,michaelcervantes@yoder.com,1516886745,Net 60,Tue/Thu
+SUP-035,SC Johnson,debbieparker@kirk-harrington.biz,(581)462-1023,Net 30,Daily
+SUP-036,Reynolds,scott81@tran-combs.com,663-131-9089,Net 30,Tue/Thu
+SUP-037,Johnson & Johnson,tylerestes@west-white.com,391-444-0667x794,Net 45,Mon/Wed/Fri
+SUP-038,Colgate,hansonchristopher@jones.com,001-458-687-6951x315,Net 60,Mon/Wed/Fri
+SUP-039,Head & Shoulders,bishopjonathan@williams-shah.com,(242)294-1127,Net 60,Mon/Wed/Fri
+SUP-040,Purell,cmalone@robinson.biz,+1-001-015-2929x176,Net 45,Daily
+SUP-041,Old Spice,rogershaley@garrison-davis.com,872-280-4563x016,Net 45,Tue/Thu
+SUP-042,Aveeno,nunezandre@rodgers-obrien.com,406.729.4627x5615,Net 60,Tue/Thu
+SUP-043,Gillette,rhubbard@taylor.org,739-173-2843x43619,Net 45,Mon/Wed/Fri
+SUP-044,Listerine,brownrebecca@roberts-kim.com,698.019.8687,Net 60,Daily
+SUP-045,Band-Aid,doughertymaria@serrano-washington.com,(487)318-6380,Net 30,Daily
+SUP-046,ChapStick,amanda01@smith.com,330-629-4486x43983,Net 30,Daily
+SUP-047,Philip Morris,johnsonlisa@johnson.com,752-782-5770x760,Net 45,Daily
+SUP-048,RJ Reynolds,mleon@young-keller.com,001-755-176-3574x95780,Net 60,Mon/Wed/Fri
+SUP-049,John Middleton,ochoamary@goodman-arroyo.org,(345)844-9397x33014,Net 30,Mon/Wed/Fri
+SUP-050,US Smokeless Tobacco,gcortez@bentley.com,7759680743,Net 45,Tue/Thu
+SUP-051,Little Trees,vmoore@roberts-morris.net,(820)055-2220x93865,Net 60,Daily
+SUP-052,Prestone,gregory41@keller.com,920.273.6960x95731,Net 60,Mon/Wed/Fri
+SUP-053,Pennzoil,lowejeffrey@spencer.biz,(383)796-2455x517,Net 60,Daily
+SUP-054,STP,normanpatricia@mccall-smith.com,001-692-202-5527x0042,Net 30,Tue/Thu
+SUP-055,Hopkins,claymichelle@cook.info,001-343-172-3854,Net 45,Mon/Wed/Fri
+SUP-056,Slime,mckenzie74@garcia.net,471.740.5729x679,Net 45,Tue/Thu

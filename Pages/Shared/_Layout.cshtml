@@ -1,0 +1,108 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var hideLayout = Context.Request.Path.Value?.ToLower().Contains("login") == true;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RetailEdge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f5f6fa;
+        }
+        .sidebar {
+            min-height: 100vh;
+            background-color: #ffffff;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar .nav-link {
+            color: #333;
+            font-weight: 500;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #e2e6ea;
+            border-radius: 5px;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #ffc107 !important;
+        }
+        .content-area {
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    @if (!hideLayout)
+    {
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+            <a class="navbar-brand" asp-page="/Dashboard">RetailEdge</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <span class="text-white me-3">
+                    @if (HttpContextAccessor.HttpContext?.Session.GetString("name") != null)
+                    {
+                        <text>Hello, @HttpContextAccessor.HttpContext.Session.GetString("name")</text>
+                    }
+                </span>
+                @if (HttpContextAccessor.HttpContext?.Session.GetString("user") != null)
+                {
+                    <form method="post" asp-page="/Dashboard" asp-page-handler="Logout">
+                        <button class="btn btn-outline-light btn-sm" type="submit">Logout</button>
+                    </form>
+                }
+            </div>
+        </nav>
+
+        <!-- Main Content Layout with Sidebar -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-2 sidebar p-3">
+                    <h6 class="text-muted">Menu</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Dashboard">📊 Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Products">📦 Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Sales">🧾 Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Users">👥 Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-page="/Reports">📈 Reports</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Page Content -->
+                <div class="col-md-10 content-area">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <!-- For Login Page -->
+        @RenderBody()
+    }
+
+    <footer class="border-top text-muted mt-4">
+        <div class="container-fluid text-center py-2">
+            &copy; 2025 - RetailEdge Portal
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

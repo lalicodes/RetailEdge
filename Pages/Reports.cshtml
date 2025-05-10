@@ -1,0 +1,100 @@
+﻿@page
+@model RetailEdge.Web.Pages.ReportsModel
+@using System.Text.Json
+@{
+    ViewData["Title"] = "Reports";
+    var dailyLabels = JsonSerializer.Serialize(Model.Dates);
+    var dailyData = JsonSerializer.Serialize(Model.DailySales);
+    var categoryLabels = JsonSerializer.Serialize(Model.Categories);
+    var categoryData = JsonSerializer.Serialize(Model.CategorySales);
+}
+
+<h2 class="mb-4">📈 Business Intelligence Dashboard</h2>
+
+<div class="row">
+    <!-- Sales Over Time -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-light fw-bold">📅 Sales Over Last 14 Days</div>
+            <div class="card-body">
+                <canvas id="dailySalesChart" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Sales -->
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-light fw-bold">📊 Sales by Category</div>
+            <div class="card-body">
+                <canvas id="categorySalesChart" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Top Products -->
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-light fw-bold">🏆 Top Selling Products</div>
+    <div class="card-body">
+        @if (Model.TopProducts.Count == 0)
+        {
+            <div class="alert alert-info">No product sales found.</div>
+        }
+        else
+        {
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity Sold</th>
+                        <th>Total Revenue ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var p in Model.TopProducts)
+                    {
+                        <tr>
+                            <td>@p.ProductName</td>
+                            <td>@p.Quantity</td>
+                            <td>@p.Revenue.ToString("F2")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@section Scripts {
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const dailyCtx = document.getElementById('dailySalesChart').getContext('2d');
+    new Chart(dailyCtx, {
+        type: 'line',
+        data: {
+            labels: @Html.Raw(dailyLabels),
+            datasets: [{
+                label: 'Sales ($)',
+                data: @Html.Raw(dailyData),
+                fill: true,
+                borderColor: '#4e73df',
+                tension: 0.4
+            }]
+        }
+    });
+
+    const categoryCtx = document.getElementById('categorySalesChart').getContext('2d');
+    new Chart(categoryCtx, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(categoryLabels),
+            datasets: [{
+                label: 'Sales ($)',
+                data: @Html.Raw(categoryData),
+                backgroundColor: '#36b9cc'
+            }]
+        }
+    });
+</script>
+}
