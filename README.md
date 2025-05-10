@@ -34,13 +34,13 @@ RetailEdge is a feature-rich, enterprise-grade retail inventory and sales manage
 
 | Page             | Preview                                   |
 |------------------|--------------------------------------------|
-| 🔐 Login Page     | ![Login](./pics/login.png)                |
-| 📊 Dashboard      | ![Dashboard](./pics/dashboard.png)         |
-| 🛒 Products Page  | ![Products](./pics/products.png)           |
-| 📈 Reports Page   | ![Reports](./pics/report.png)              |
-| 💵 Sales Page     | ![Sales](./pics/sales.png)                 |
+| 🔐 Login Page     | ![Login](./screenshots/login.png)                |
+| 📊 Dashboard      | ![Dashboard](./screenshots/dashboard.png)         |
+| 🛒 Products Page  | ![Products](./screenshots/products.png)           |
+| 📈 Reports Page   | ![Reports](./screenshots/report.png)              |
+| 💵 Sales Page     | ![Sales](./screenshots/sales.png)                 |
 
-> 💡 All screenshots are stored in `/pics` — easy to manage and update!
+> 💡 All screenshots are stored in `/screenshots` — easy to manage and update!
 
 ---
 
