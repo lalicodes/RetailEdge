@@ -54,7 +54,7 @@ RetailEdge is a feature-rich, enterprise-grade retail inventory and sales manage
 
 ### 📦 Clone & Run
 
-git clone https://github.com/yourusername/RetailEdge.git
+git clone https://github.com/lalicodes/RetailEdge.git
 cd RetailEdge
 dotnet restore
 dotnet run
@@ -64,7 +64,7 @@ dotnet run
 Update your DB connection in OracleHelper.cs:
 
 "User Id=system;Password=RetailEdge2025;Data Source=//192.168.79.104:1521/XE;"
-Add any SQL Server strings to appsettings.json.
+
 
 🧪 Sample Query (Oracle)
 
@@ -105,6 +105,3 @@ I built this project to simulate the systems used by retail analysts, merchandis
 
 ❤️ Like This Project?
 Give it a ⭐ on GitHub!
-Feel free to fork, clone, or suggest improvements — collaboration is welcome!
-
-Would you like me to turn this into an actual `README.md` file and help commit + push it to your repo?
