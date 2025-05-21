@@ -110,6 +110,3 @@ Report building and inventory analytics
 Lali Krishnan
 Bachelor of Science, Computer Science
 I built this project to simulate the systems used by retail analysts, merchandisers, and IT engineers in national retail chains.
-
-❤️ Like This Project?
-Give it a ⭐ on GitHub!
